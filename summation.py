@@ -15,7 +15,7 @@ def summationV1 (x):
         exponent = 2 * n + 1
         value = x**(exponent)
         
-        if value < 10**(-5):
+        if abs(value) < 10**(-5):
             return sum
         
         sum += value
@@ -42,7 +42,7 @@ def summationV2 (x, tolerance = 10**(-5)):
         exponent = 2 * n + 1
         value = x**(exponent)
     
-        if value < tolerance:
+        if abs(value) < tolerance:
             return sum
         
         sum += value
